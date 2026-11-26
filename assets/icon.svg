@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+  <!-- Glance app icon: flat tile, sun and two hills. Source for icon.png / icon.ico (see examples/make_icon.rs). -->
+  <defs>
+    <clipPath id="tile"><rect x="16" y="16" width="224" height="224" rx="48"/></clipPath>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="48" fill="#2F6FD8"/>
+  <g clip-path="url(#tile)">
+    <circle cx="170" cy="86" r="24" fill="#FFC53D"/>
+    <path d="M112 200 L172 128 Q180 119 188 128 L260 200 L260 212 L112 212 Z" fill="#9DBEF2"/>
+    <path d="M-4 212 L86 104 Q94 95 102 104 L194 212 Z" fill="#FFFFFF"/>
+  </g>
+</svg>

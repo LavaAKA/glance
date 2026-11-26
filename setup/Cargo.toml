@@ -1,0 +1,13 @@
+[package]
+name = "glance-setup"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+
+# Built after Glance itself (it carries target/release/glance.exe inside). See README.md.
+[dependencies]
+windows = { version = "0.62.2", features = ["Win32_Foundation", "Win32_System_Registry", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+opt-level = "z"
+strip = true

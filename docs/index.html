@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glance: Photo and Video Viewer for Windows</title>
+<meta name="description" content="A fast, simple photo and video viewer for Windows. Free and open source.">
+<link rel="icon" href="icon.png">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #f6f6f6; --text: #1c1c1c; --weak: #5f5f5f; --line: #dcdcdc; --card: #ffffff;
+    --accent: #2f6fd8; --accent-text: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #1b1b1b; --text: #e8e8e8; --weak: #a0a0a0; --line: #333; --card: #232323; --accent: #5b8fe0; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 20px; }
+  header { padding: 18px 0; border-bottom: 1px solid var(--line); }
+  header .wrap { display: flex; align-items: center; gap: 10px; }
+  header img { width: 28px; height: 28px; }
+  header b { font-size: 17px; }
+  header nav { margin-left: auto; display: flex; gap: 18px; font-size: 14px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .hero { padding: 56px 0 40px; display: flex; gap: 32px; align-items: center; }
+  .hero img { width: 112px; height: 112px; flex: none; }
+  h1 { font-size: 34px; line-height: 1.2; margin: 0 0 8px; font-weight: 600; }
+  .lead { color: var(--weak); margin: 0 0 22px; font-size: 18px; }
+  .download { display: inline-block; background: var(--accent); color: var(--accent-text); padding: 11px 20px; border-radius: 4px; font-weight: 600; }
+  .download:hover { text-decoration: none; filter: brightness(1.08); }
+  .small { color: var(--weak); font-size: 13px; margin-top: 10px; }
+  h2 { font-size: 20px; font-weight: 600; margin: 0 0 14px; }
+  section { padding: 30px 0; border-top: 1px solid var(--line); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
+  .item { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px; }
+  .item b { display: block; margin-bottom: 2px; }
+  .item span { color: var(--weak); font-size: 14px; }
+  ol, ul { padding-left: 20px; margin: 0; }
+  li { margin: 4px 0; }
+  kbd { font: 12px Consolas, monospace; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 3px; padding: 1px 5px; background: var(--card); }
+  footer { padding: 26px 0 40px; border-top: 1px solid var(--line); color: var(--weak); font-size: 13px; }
+  @media (max-width: 600px) { .hero { flex-direction: column; align-items: flex-start; padding-top: 36px; } .hero img { width: 80px; height: 80px; } h1 { font-size: 28px; } header nav { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <img src="icon.png" alt="">
+    <b>Glance</b>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="https://github.com/LavaAKA/glance">Source code</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <img src="icon.png" alt="Glance icon">
+    <div>
+      <h1>Glance</h1>
+      <p class="lead">A fast, simple photo and video viewer for Windows. Free and open source.</p>
+      <a class="download" href="https://github.com/LavaAKA/glance/releases/latest/download/Glance-Setup.exe">Download for Windows</a>
+      <div class="small">Windows 10 and 11, 64-bit &middot; <a href="https://github.com/LavaAKA/glance/releases">All versions</a></div>
+    </div>
+  </div>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <div class="grid">
+      <div class="item"><b>Photos and videos together</b><span>JPG, PNG, HEIC, AVIF, WebP, GIF, RAW from most cameras, plus MP4, MOV, MKV and more.</span></div>
+      <div class="item"><b>Quick folder browsing</b><span>Thumbnails, folder previews, sorting, search by name, date or camera, and a sidebar of your places.</span></div>
+      <div class="item"><b>Send from your phone</b><span>Scan a QR code and pick photos on your phone. They land in a folder on your PC over your Wi-Fi.</span></div>
+      <div class="item"><b>Organize</b><span>Stars, favorites, color labels and tags. Move, copy, rename many files at once, create and delete folders.</span></div>
+      <div class="item"><b>Light edits</b><span>Rotate, flip, crop, straighten, brightness and contrast. Edits save as a copy, never over the original.</span></div>
+      <div class="item"><b>Video player</b><span>Subtitles, speed, picture in picture, trimming, save a frame, and it remembers where you stopped.</span></div>
+      <div class="item"><b>Find look-alikes</b><span>Spot near-duplicate photos, see where photos were taken on a map, compare two side by side.</span></div>
+      <div class="item"><b>Your look</b><span>Light and dark themes in seven colors, an optional see-through glass look, and keyboard shortcuts for everything.</span></div>
+    </div>
+  </section>
+
+  <section id="install">
+    <h2>Install</h2>
+    <ol>
+      <li>Download <a href="https://github.com/LavaAKA/glance/releases/latest/download/Glance-Setup.exe">Glance-Setup.exe</a> and open it.</li>
+      <li>Windows may say it protected your PC, because Glance isn't signed with a paid certificate. Click <b>More info</b>, then <b>Run anyway</b>.</li>
+      <li>Click <b>Yes</b> when Windows asks to allow changes. Glance installs into Program Files and adds itself to the Start menu.</li>
+      <li>To open photos and videos in Glance when you double-click them, choose Glance in <b>Settings &gt; Apps &gt; Default apps</b>. Setup offers to take you there.</li>
+    </ol>
+    <p class="small">To uninstall: Settings &gt; Apps &gt; Installed apps &gt; Glance &gt; Uninstall.</p>
+  </section>
+
+  <section>
+    <h2>A few shortcuts</h2>
+    <ul>
+      <li><kbd>&larr;</kbd> <kbd>&rarr;</kbd> previous and next &middot; <kbd>F</kbd> fullscreen &middot; <kbd>Space</kbd> play or pause</li>
+      <li><kbd>1</kbd>&ndash;<kbd>5</kbd> stars &middot; <kbd>Shift</kbd>+<kbd>F</kbd> favorite &middot; <kbd>Del</kbd> delete</li>
+      <li><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>N</kbd> new folder &middot; <kbd>F1</kbd> every shortcut</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">Glance is free and open source. <a href="https://github.com/LavaAKA/glance">View the code on GitHub</a> &middot; <a href="https://github.com/LavaAKA/glance/issues">Report a problem</a></div>
+</footer>
+</body>
+</html>
